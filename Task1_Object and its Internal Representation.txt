@@ -1,0 +1,33 @@
+Objects and its Internal Representation in Javascript
+
+Objects, in JavaScript, is it’s most important data-type and forms the building blocks for modern JavaScript.These objects are quite different from JavaScript’s primitive data-types(Number, String, Boolean, null, undefined and symbol) in the sense that while these primitive data-types all store a single value each (depending on their types).
+Objects are more complex and each object may contain any combination of these primitive data-types as well as reference data-types.
+An object, is a reference data type. Variables that are assigned a reference value are given a reference or a pointer to that value. That reference or pointer points to the location in memory where the object is stored.
+
+Objects and properties:
+A JavaScript object has properties associated with it. A property of an object can be explained as a variable that is attached to the object. Object properties are basically the same as ordinary JavaScript variables, except for the attachment to objects. The properties of an object define the characteristics of the object.
+Syntax for creating object in Javascript is as follows
+objectname = {key1:value1,key2:value2,....keyN:valueN};
+Like all JavaScript variables, both the object name (which could be a normal variable) and key name are case sensitive. You can define a key by assigning it a value.
+For example, let's create an object named employee and give its key and values as follows:
+var employee= {Name:"Joe", Age:25, Gender:"Male"};
+You can access the key of an object by two methods:
+1) Dot Notation (Dot(.) Method): 
+    Syntax:
+        objectname.keyname;
+    For ex: employee.Name; // key name based on the above example.
+2) Box Notation (Box[] Method):
+    Syntax:
+        objectname["keyname"];
+    For ex: employee["Name"];
+ You can use the Box method with for...in(Loop) to iterate overall enumerable key and values of an object.
+    Syntax:
+        for(variablename in object)
+        {
+            code block to be executed
+        }
+    For ex: 
+        for (Name in employee)
+        {
+            console.log(name);
+        }
