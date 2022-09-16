@@ -1,0 +1,41 @@
+var student=
+[
+  {
+    "id":"101",
+    "Name":"Joe",
+    "Dept":"ECE",
+    "Batch":"2020",
+    "Gpa":"8.3"
+  },
+  {
+    "id":"201",
+    "Name":"Ram",
+    "Dept":"CSE",
+    "Batch":"2020",
+    "Gpa":"7.8"
+  },
+  {
+    "id":"301",
+    "Name":"Zoey",
+    "Dept":"EIE",
+    "Batch":"2020",
+    "Gpa":"8.91"
+  }
+];
+
+//for Loop
+
+for(var i=0;i<student.length;i++)
+{
+  console.log(student[i].id);
+  console.log(student[i].Name);
+  console.log(student[i].Dept);
+  console.log(student[i].Gpa);
+}
+
+//for in Loop
+for(var k in student)
+{
+ console.log(k,student[k]);  
+}
+
