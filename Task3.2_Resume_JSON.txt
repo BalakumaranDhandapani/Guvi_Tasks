@@ -1,0 +1,43 @@
+var myResume=
+{
+  "Basics":
+  {
+    "Name":"Balakumaran",
+    "Age": "26",
+    "Email":"pavi.dhandapani@gmail.com",
+    "Phone":"9095899707",
+    "Degree":"B.E(EIE)",
+    "Permananent_Address":
+    {
+      "Address":"5/288-C,Teacher's Colony1st Avenue,Bhavani main Road",
+      "City":"Erode",
+      "State":"Tamilnadu",
+      "Pincode":"638052",
+      "Country":"India"
+    },
+    "LinkedIn_Profile":"https://www.linkedin.com/in/bala-kumaran-5b9bb611a",
+    "Work_Experience":
+    {
+      "Company":"Tata Consultancy Services",
+      "Designation":"IT Analyst",
+      "Joined_Date":"01-03-2017",
+      "Currently_working":"Yes",
+      "Role_Summary":"IT Support Analyst handling Customer queries,monitoring user data,preparing and sending various Reports like Escalation Report,Status Report in Telecom Domain"
+    },
+    "Education":
+    {
+      "Institution":"Easwari Engineering College",
+      "Degree":"B.E.Electronics and Instrumentation",
+      "Year": "2012-2016",
+      "GPA":"7.3"
+    },
+    "Skills":
+    {
+      "Programming_Language":"C++,SQL",
+      "Other Skills":"Tableau,PowerBI(Beginner)"
+    },
+    "Languages known":"Tamil(Native),English,Hidi(Beginner)",
+    "Hobbies":"Petrolhead,Technophile,Watching movies"
+  }
+}
+  console.log(myResume);
