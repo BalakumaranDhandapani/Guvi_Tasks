@@ -1,0 +1,76 @@
+I)) Write a JavaScript function to generate an array between two integers of 1 step length.
+
+1) Input :
+console.log(range(3, 7));
+Expected Output:
+[3,4, 5, 6, 7]
+
+2) Input :
+console.log(range(-4, 7));
+Expected Output:
+[-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+
+II)) Write a JavaScript program to find the most frequent item of an array.
+Sample array: 
+3) var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];
+Sample Output: q ( 5 times )
+
+Task Submission Form:
+https://bit.ly/3xB6Q5U
+
+//this is a function for displaying values
+function foo(){
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Task Function Code:
+
+1,2) Write a JavaScript function to generate an array between two integers of 1 step length.
+
+var arr=[];  //Empty array for storing return values
+    
+function range(start, end)  //function named range which has 2 input parameters
+{
+     for(var i=start;i<=end;i++)    //looping statement for continuous printing of ranges
+     {
+         arr.push(i);       //pushing the data into the array
+     }
+     return arr;        ///returning the value of array
+    
+}
+console.log(range(3, 7));
+console.log(range(-4, 2));      //function call statement with parameters
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+II)) Write a JavaScript program to find the most frequent item of an array.
+
+Sample array: 
+var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];
+
+#3) Code:
+
+var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];   //given array of elements  
+    var n = 1;      //used to compare,store and print the number of times that the element is repeated.
+    var count = 0;  
+    var rep;        // used to store and print the most repeated variable
+
+for (var i=0; i<arr1.length; i++)       //for loop used for comparing each elements in an array using the index variable as i.
+{
+        for (var j=i; j<arr1.length; j++)   //for loop used for comparing each elements in an array using the index variable as j.
+        {
+                //comparison of first element with all other elements using if condition similarly for all elements using for loop.
+                if (arr1[i] === arr1[j])    
+                 count++;                   // if its equals increasing the count of the variable for number of times it's repeated
+                if (n<count)
+                {
+                  n=count;              // storing the number of times repeated in n variable for final output. 
+                  rep = arr1[i];        // storing the most repeated variable in rep(repeated) variable 
+                }
+        }
+        count=0;                        
+}
+console.log(rep+" ( " +n +" times ) ") ; //display of the element which is most frequent in the given array.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
