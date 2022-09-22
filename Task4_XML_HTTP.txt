@@ -1,0 +1,46 @@
+1. How to compare two JSON have the same properties without order?
+
+var obj1={name:"Joe",age:30};
+var obj2={age:30,name:"Joe"};
+
+console.log(JSON.stringify(obj1) === JSON.stringify(obj2));
+Output: False.
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+2. Use the restcountries API URL-> https://restcountries.eu/rest/v2/all and display all the country flags in the console.
+
+Code:
+
+var request=new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v2/all");
+request.send();
+request.onload=function()
+{
+    var result=JSON.parse(request.response);
+    //console.log(result);
+    for(var i=0;i<result.length;i++)
+    {
+        var out=result[i].flag;
+        console.log(out);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------
+
+3. Use the same rest countries, print all countries name, regions, sub regions and populations.
+
+request.onload=function()
+{
+    var result=JSON.parse(request.response);
+    for(var i=0;i<result.length;i++)
+    {
+        var out=result[i].flag;
+        var region=result[i].region;
+        var reg=result[i].subregion;
+        var strength=result[i].population;
+        console.log("Flag:", out, "Region:", region, "SubRegion:",reg, "Population:", strength);
+    }
+}
+
+--------------------------------------------------------------------------------------------------------
