@@ -1,0 +1,202 @@
+1.https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+ 
+a) Write a constructor for the class Movie, which takes a String representing the title of the movie, 
+//a String representing the studio, and a String representing the rating as its arguments, 
+//and sets the respective class properties to these values.
+
+class movie
+{
+  constructor(title,studio,rating)
+  {
+    this.title=title;
+    this.studio=studio;
+    this.rating=rating;    
+  }  
+}  
+--------
+
+b)The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+
+class movie
+{
+  constructor(title,studio,rating)
+  {
+    this.title=title;
+    this.studio=studio;
+    this.rating="PG";    
+  }  
+}
+
+------
+
+c) Write a method getPG, which takes an array of base type Movie as its argument, and returns a new array of only those movies in the input array with a rating of "PG":
+
+class movie
+{
+  constructor(title,studio,rating)
+  {
+    this.title=title;
+    this.studio=studio;
+    this.rating=rating;    
+  }
+
+getPG()
+{  
+  if(this.rating)
+{
+  return "the rating is",this.rating;
+}
+}
+	  
+} 
+
+-------
+
+d) Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”:
+
+var mov1= new movie("Casino Royale","Eon Productions","PG13");
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+
+class Circle
+{
+constructor(radius,color)
+{
+   this.radius=1.0;
+   this.color="Red";
+
+if(radius!==undefined)
+{
+   this.radius=radius;
+}
+
+if(color!==undefined)
+{
+   this.color=color;
+}
+
+}
+
+}
+
+getRadius()
+{
+return this.radius;
+}
+
+setRadius(radius)
+{
+  this.radius=radius;
+  return radius;
+}  
+
+getColor()
+{
+return thiscolor;
+}
+
+setColor(color)
+{
+  this.color=color;
+  return color;
+}
+
+toString()
+{
+  return `Radius: ${this.radius} and color: ${this.color} `; 
+}  
+
+getArea()
+{
+  return (((Math.PI)*this.radius*this.radius).toFixed(2));
+}
+
+getCircumference()
+{
+ return ((2*(Math.PI)*this.radius).toFixed(2)); 
+}  
+
+}
+
+var c1= new Circle(2,"Red");
+console.log(c1.getRadius());
+console.log(c1.setRadius(3));
+console.log(c1.toString());
+console.log("Area:", c1.getArea());
+console.log("Circumference:", c1.getCircumference());
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Write a “person” class to hold all the details.
+
+class Person
+{
+  constructor(name,age,gender)
+  {
+    this.name=name;
+    this.age=age;
+    this.gender=gender;  
+  }
+  
+  getName()
+  {
+    return this.name;
+  }
+  getDetails()
+  {
+    return `Name:${this.name},Age:${this.age},Gender:${this.gender}`;
+  }
+  
+}
+
+var person1= new Person("Joe",23,"Male");
+var person2= new Person("David",26,"Male");
+console.log(person1.getDetails());
+console.log(person2.getDetails());
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. write a class to calculate the uber price.
+
+class Uber
+{
+  constructor(c_name,distance)
+  {
+    this.c_name=c_name;
+    this.distance=distance;
+    this.d_name="Ram";
+    this.d_id= 1;
+  }  
+  
+  printCustomer()
+  {
+    return `Customer Name: ${this.c_name}\nDistance Travelled: ${this.distance}`;
+  }
+  
+  printDriver()
+  {
+   return `Uber Driver Details:\nDriver Name: ${this.d_name}\nId: ${this.d_id}`; 
+  }  
+  
+  fareCalc()
+  {
+   var baseprice=12;
+   var priceperkm=8;
+   var tot=((this.distance*priceperkm)+baseprice);
+   return(`Base Price=${baseprice}  Total Fare to be paid: ${tot}`);
+  }  
+   
+}
+
+var c1= new Uber("Joe",10);
+console.log(c1.printCustomer());
+console.log(c1.printDriver());
+console.log(c1.fareCalc());
+var c2= new Uber("David",15);
+console.log(c2.printCustomer());
+console.log(c2.printDriver());
+console.log(c2.fareCalc());
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
